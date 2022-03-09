@@ -2,10 +2,10 @@
 
 #DZ №4
 
-echo -e "First result: $(( $(cat 1.txt) ))\nSecond result: $(( $(cat 2.txt) ))"
-if [[ $(( $(cat 1.txt) )) -ge $(( $(cat 2.txt) )) ]]
+echo -e "First result: $(( $(cat $1) ))\nSecond result: $(( $(cat $2) ))"
+if [[ $(( $(cat $1) )) -ge $(( $(cat $2) )) ]]
 then
-	echo "Greater: $(( $(cat 1.txt) ))"
+	echo $(( $(cat $1) ))
 else
-	echo "Greater: $(( $(cat 2.txt) ))"
+	echo $(( $(cat $2) ))
 fi
