@@ -1,0 +1,124 @@
+
+Controller called method GetPrice
+Entity Framework Core 6.0.3 initialized 'CurrencyDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+Executed DbCommand (2,119ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CurrencyDB];
+Executed DbCommand (1,109ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CurrencyDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (62ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Applying migration '20220404205350_Frist'.
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Currency] (
+    [Id] int NOT NULL IDENTITY,
+    [Price] float NOT NULL,
+    [CurrencyCode] nvarchar(max) NULL,
+    [Date] nvarchar(max) NULL,
+    [Value] int NOT NULL,
+    CONSTRAINT [PK_Currency] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220404205350_Frist', N'6.0.3');
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Currency] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (58ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Double), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Currency] ([CurrencyCode], [Date], [Price], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Currency]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Now listening on: https://[::]:443
+Now listening on: http://[::]:80
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /app/
+Entity Framework Core 6.0.3 initialized 'CurrencyDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+Executed DbCommand (1,301ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [CurrencyDB];
+Executed DbCommand (1,134ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [CurrencyDB] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (74ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+Applying migration '20220404205350_Frist'.
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Currency] (
+    [Id] int NOT NULL IDENTITY,
+    [Price] float NOT NULL,
+    [CurrencyCode] nvarchar(max) NULL,
+    [Date] nvarchar(max) NULL,
+    [Value] int NOT NULL,
+    CONSTRAINT [PK_Currency] PRIMARY KEY ([Id])
+);
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220404205350_Frist', N'6.0.3');
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Currency] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+Executed DbCommand (18ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Double), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Currency] ([CurrencyCode], [Date], [Price], [Value])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Currency]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Now listening on: https://[::]:443
+Now listening on: http://[::]:80
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Development
+Content root path: /app/
+Controller called method GetPrice
+Controller called method GetPrice
+Controller called method GetPrice
+Controller called method GetPrice
+Controller called method GetPrice
+Controller called method GetPrice
+Controller called method GetPrice
+Controller called method GetPrice
+Controller called method GetPrice
+Controller called method GetPrice

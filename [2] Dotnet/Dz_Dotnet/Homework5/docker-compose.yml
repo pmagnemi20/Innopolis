@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  ms-sql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "P@ssw0rd"
+    ports:
+      - "1433:1433"
+  homework1:
+    image: ${DOCKER_REGISTRY-}homework1
+    environment:
+      DbServer: "ms-sql-server"
+      DbPort: "1433"
+      DbUser: "sa"
+      DbPassword: "P@ssw0rd"
+    build:
+      context: .
+      dockerfile: Homework1/Dockerfile
